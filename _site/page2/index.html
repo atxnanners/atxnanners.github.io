@@ -1,246 +1,477 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
   <title>
     
-      Poole &middot; The Jekyll Butler
+      Hydeout &middot; A Jekyll theme
     
   </title>
 
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="Poole" href="/atom.xml">
+  
 
-  <!-- Begin Jekyll SEO tag v2.6.1 -->
-<meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Home" />
-<meta name="author" content="Mark Otto" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/page2/" />
-<meta property="og:url" content="http://localhost:4000/page2/" />
-<meta property="og:site_name" content="Poole" />
-<link rel="prev" href="http://localhost:4000/" />
-<link rel="next" href="http://localhost:4000/page3" />
-<script type="application/ld+json">
-{"author":{"@type":"Person","name":"Mark Otto"},"url":"http://localhost:4000/page2/","headline":"Home","@type":"WebPage","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="/hydeout/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/hydeout/favicon.png" />
+<link rel="shortcut icon" href="/hydeout/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/hydeout/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
 </head>
 
 
-  <body>
+  <body class="index">
 
-    <div class="container content">
-      <header class="masthead">
-        <h3 class="masthead-title">
-          <a href="/" title="Home">Poole</a>
-          <small>The Jekyll Butler</small>
-        </h3>
-      </header>
-
-      <main>
-        <div class="posts">
-  
-  <article class="post">
-    <h1 class="post-title">
-      <a href="/2020/04/03/options/">
-        Options
+    <div id="sidebar">
+  <header>
+    <h1 class="site-title">
+      <a href="/hydeout/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        Hydeout
       </a>
     </h1>
-
-    <time datetime="2020-04-03T00:00:00-05:00" class="post-date">03 Apr 2020</time>
-
-    <p>With Poole as a baseline theme for Jekyll, there aren’t many options available out of the box. Basic light and dark mode support is included. Colors are also provided for your own customization, while other Poole themes build on this to create more unique looks.</p>
-
-<ul id="markdown-toc">
-  <li><a href="#dark-mode" id="markdown-toc-dark-mode">Dark mode</a></li>
-  <li><a href="#creating-themes" id="markdown-toc-creating-themes">Creating themes</a></li>
-  <li><a href="#colors" id="markdown-toc-colors">Colors</a></li>
-  <li><a href="#gray-colors" id="markdown-toc-gray-colors">Gray colors</a></li>
-  <li><a href="#google-analytics" id="markdown-toc-google-analytics">Google Analytics</a></li>
-</ul>
-
-<h2 id="dark-mode">Dark mode</h2>
-
-<p><strong>Dark mode is enabled automatically</strong> via CSS media query—you’ll find the source code for this in the <code class="highlighter-rouge">_sass/_variables.scss</code> stylesheet. If you’re familiar with CSS custom properties, you can also use this method to build your own color schemes.</p>
-
-<p><a href="https://markdotto.com/2018/11/05/css-dark-mode/">Read more about using CSS dark mode</a> via media queries like this:</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example media query to detect dark mode</span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="n">dark</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// ...</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="creating-themes">Creating themes</h2>
-
-<p>If you want to make your own color schemes, modify the CSS variables in the <code class="highlighter-rouge">_sass/_variables.scss</code> stylesheet with a scoped data attribute or class name.</p>
-
-<p>For example, below we’ve created the beginnings of a blue theme:</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example blue theme</span>
-<span class="o">[</span><span class="nt">data-theme</span><span class="o">=</span><span class="s2">"blue"</span><span class="o">]</span> <span class="p">{</span>
-  <span class="na">--body-bg</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="no">blue</span><span class="p">);</span>
-  <span class="na">--body-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Then, apply the theme by adding <code class="highlighter-rouge">data-theme="blue"</code> to the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element.</p>
-
-<h2 id="colors">Colors</h2>
-
-<p>Change your site styles by modifying the source code with these CSS custom properties. Poole’s colors come from the <a href="https://yeun.github.io/open-color/">Open Color project</a>.</p>
-
-<dl class="colors">
-  <dt style="background-color: #fa5252;"></dt>
-  <dd>
-    <strong>var(--red)</strong><br />
-    #fa5252
-  </dd>
-  <dt style="background-color: #e64980;"></dt>
-  <dd>
-    <strong>var(--pink)</strong><br />
-    #e64980
-  </dd>
-  <dt style="background-color: #be4bdb;"></dt>
-  <dd>
-    <strong>var(--grape)</strong><br />
-    #be4bdb
-  </dd>
-  <dt style="background-color: #7950f2;"></dt>
-  <dd>
-    <strong>var(--purple)</strong><br />
-    #7950f2
-  </dd>
-  <dt style="background-color: #4c6ef5;"></dt>
-  <dd>
-    <strong>var(--indigo)</strong><br />
-    #4c6ef5
-  </dd>
-  <dt style="background-color: #228be6;"></dt>
-  <dd>
-    <strong>var(--blue)</strong><br />
-    #228be6
-  </dd>
-  <dt style="background-color: #15aabf;"></dt>
-  <dd>
-    <strong>var(--cyan)</strong><br />
-    #15aabf
-  </dd>
-  <dt style="background-color: #12b886;"></dt>
-  <dd>
-    <strong>var(--teal)</strong><br />
-    #12b886
-  </dd>
-  <dt style="background-color: #40c057;"></dt>
-  <dd>
-    <strong>var(--green)</strong><br />
-    #40c057
-  </dd>
-  <dt style="background-color: #fab005;"></dt>
-  <dd>
-    <strong>var(--yellow)</strong><br />
-    #fab005
-  </dd>
-  <dt style="background-color: #fd7e14;"></dt>
-  <dd>
-    <strong>var(--orange)</strong><br />
-    #fd7e14
-  </dd>
-</dl>
-
-<h2 id="gray-colors">Gray colors</h2>
-
-<p>There are also ten grayscale colors to choose from.</p>
-
-<dl class="colors">
-  <dt style="background-color: #f8f9fa;"></dt>
-  <dd>
-    <strong>var(--gray-000)</strong><br />
-    #f8f9fa
-  </dd>
-  <dt style="background-color: #f1f3f5;"></dt>
-  <dd>
-    <strong>var(--gray-100)</strong><br />
-    #f1f3f5
-  </dd>
-  <dt style="background-color: #e9ecef;"></dt>
-  <dd>
-    <strong>var(--gray-200)</strong><br />
-    #e9ecef
-  </dd>
-  <dt style="background-color: #dee2e6;"></dt>
-  <dd>
-    <strong>var(--gray-300)</strong><br />
-    #dee2e6
-  </dd>
-  <dt style="background-color: #ced4da;"></dt>
-  <dd>
-    <strong>var(--gray-400)</strong><br />
-    #ced4da
-  </dd>
-  <dt style="background-color: #adb5bd;"></dt>
-  <dd>
-    <strong>var(--gray-500)</strong><br />
-    #adb5bd
-  </dd>
-  <dt style="background-color: #868e96;"></dt>
-  <dd>
-    <strong>var(--gray-600)</strong><br />
-    #868e96
-  </dd>
-  <dt style="background-color: #495057;"></dt>
-  <dd>
-    <strong>var(--gray-700)</strong><br />
-    #495057
-  </dd>
-  <dt style="background-color: #343a40;"></dt>
-  <dd>
-    <strong>var(--gray-800)</strong><br />
-    #343a40
-  </dd>
-  <dt style="background-color: #212529;"></dt>
-  <dd>
-    <strong>var(--gray-900)</strong><br />
-    #212529
-  </dd>
-</dl>
-
-<h2 id="google-analytics">Google Analytics</h2>
-
-<p>Specify <code class="highlighter-rouge">ga_analytics</code> in your <code class="highlighter-rouge">_config.yml</code> and restart the server to add Google Analytics tracking code.</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Google Analytics example</span>
-<span class="ss">ga_analytics: </span><span class="no">UA</span><span class="o">-</span><span class="mo">000000</span><span class="o">-</span><span class="mi">0</span>
-</code></pre></div></div>
-
-  </article>
+    <p class="lead">The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.</p>
+  </header>
+  <nav id="sidebar-nav-links">
   
+    <a class="home-link "
+        href="/hydeout/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+      <a class="page-link "
+          href="/hydeout/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/hydeout/category/edge-case.html">Edge Case</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+      <a class="category-link "
+          href="/hydeout/category/markup.html">Markup</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/hydeout/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/hydeout/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/hydeout/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2021.
+  <a href="/hydeout/LICENSE.md">MIT License.</a>
+</p>
+
 </div>
 
+    <main class="container">
+      <div class="content">
+  
 <div class="pagination">
-  
-    <a class="pagination-item older" href="/page3">Older</a>
-  
-  
-    <a class="pagination-item newer" href="/">Newer</a>
-  
+  <a class="pagination-item newer"
+     href="/hydeout/">
+    Newer
+  </a>
 </div>
 
-      </main>
 
-      <footer class="footer">
-        <small>
-          &copy; <time datetime="2021-03-15T20:11:01-05:00">2021</time>. All rights reserved.
-        </small>
-      </footer>
-    </div>
+
+  
+
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/hydeout/layout/2012/02/04/layout-excerpt-defined.html">
+        Layout: Excerpt (Defined)
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">04 Feb 2012</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Layout
+      
+    
+  </span>
+</div>
+
 
     
+      This is a user-defined post excerpt. It should be displayed in place of the auto-generated excerpt or post content on index pages.
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/hydeout/layout/2012/02/04/layout-excerpt-defined.html">More &hellip;</a>
+      
+    
+  </article>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/hydeout/layout/2012/02/03/layout-excerpt-generated.html">
+        Layout: Excerpt (Generated with Separator Tag)
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">03 Feb 2012</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Layout
+      
+    
+  </span>
+</div>
+
+
+    
+      <p>This is the post content. Archive-index pages should display an <a href="https://jekyllrb.com/docs/posts/#post-excerpts">auto-generated excerpt</a> of all the content preceding the <code class="language-plaintext highlighter-rouge">excerpt_separator</code>, as defined in the YAML Front Matter or globally in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<p>Be sure to test the formatting of the auto-generated excerpt, to ensure that it doesn’t create any layout problems.</p>
+
+
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/hydeout/layout/2012/02/03/layout-excerpt-generated.html">More &hellip;</a>
+      
+    
+  </article>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/hydeout/markup/2012/01/31/markup-title-with-special-characters.html">
+        Markup: Title with Special&nbsp;---&nbsp;Characters
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">31 Jan 2012</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/hydeout/category/markup.html">
+          Markup
+        </a>
+      
+    
+  </span>
+</div>
+
+
+    
+      <p>Putting special characters in the title should have no adverse effect on the layout or functionality.</p>
+
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/hydeout/markup/2012/01/31/markup-title-with-special-characters.html">More &hellip;</a>
+      
+    
+  </article>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/hydeout/markup/2012/01/30/markup-title-with-markup.html">
+        Markup: Title *with* **Markdown**
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">30 Jan 2012</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/hydeout/category/markup.html">
+          Markup
+        </a>
+      
+    
+  </span>
+</div>
+
+
+    
+      <p>Using Markdown in the title should have no adverse effect on the layout or functionality.</p>
+
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/hydeout/markup/2012/01/30/markup-title-with-markup.html">More &hellip;</a>
+      
+    
+  </article>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/hydeout/markup/2012/01/29/markup-text-readability.html">
+        Markup: Text Readability Test
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">29 Jan 2012</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/hydeout/category/markup.html">
+          Markup
+        </a>
+      
+    
+  </span>
+</div>
+
+
+    
+      A large amount of sample text to test readability of a text heavy page.
+    
+
+    
+      
+      
+      
+
+      
+        <a href="/hydeout/markup/2012/01/29/markup-text-readability.html">More &hellip;</a>
+      
+    
+  </article>
+  
+
+  
+<div class="pagination">
+  <a class="pagination-item older"
+     href="/hydeout/page3">
+    Older
+  </a>
+</div>
+
+
+</div>
+    </main>
+
+    <!-- Optional footer content -->
+
   </body>
 </html>
